@@ -1,6 +1,6 @@
 import { tool } from "ai";
 import { z } from "zod";
-import { parallel } from "./parallel";
+import { parallel } from "./parallel.js";
 
 // Definimos inputSchema con Zod
 export const searchTool = tool({

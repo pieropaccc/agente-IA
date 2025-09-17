@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { runAgent } from "../../lib/agent.js";
+import { runAgent } from "../../lib/agent";
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

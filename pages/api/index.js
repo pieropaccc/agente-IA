@@ -1,7 +1,9 @@
+import Head from "next/head";
+
 export default function Home() {
   return (
     <>
-      <head>
+      <Head>
         <title>Agente AI Web Search</title>
         <style>{`
           * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -61,18 +63,19 @@ export default function Home() {
           }
           .input-area button:hover { background: #0056b3; }
         `}</style>
-      </head>
-      <body>
-        <h1>Agente AI Web Search</h1>
-        <div className="chat-container">
-          <div className="messages" id="messages"></div>
-          <div className="input-area">
-            <input type="text" id="query" placeholder="Escribe tu pregunta..." />
-            <button id="sendBtn">Enviar</button>
-          </div>
-        </div>
+      </Head>
 
-        <script dangerouslySetInnerHTML={{
+      <h1>Agente AI Web Search</h1>
+      <div className="chat-container">
+        <div className="messages" id="messages"></div>
+        <div className="input-area">
+          <input type="text" id="query" placeholder="Escribe tu pregunta..." />
+          <button id="sendBtn">Enviar</button>
+        </div>
+      </div>
+
+      <script
+        dangerouslySetInnerHTML={{
           __html: `
             const sendBtn = document.getElementById('sendBtn');
             const queryInput = document.getElementById('query');
@@ -118,9 +121,9 @@ export default function Home() {
             queryInput.addEventListener("keypress", (e) => {
               if (e.key === "Enter") sendBtn.click();
             });
-          `
-        }} />
-      </body>
+          `,
+        }}
+      />
     </>
   );
 }

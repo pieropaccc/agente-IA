@@ -1,6 +1,6 @@
 import { streamText } from "ai";
-import { cerebras } from "./cerebras";
-import { searchTool } from "./searchTool";
+import { cerebras } from "./cerebras.js";
+import { searchTool } from "./searchTool.js";
 import 'dotenv/config'
 
 export async function runAgent(userQuery: string) {
